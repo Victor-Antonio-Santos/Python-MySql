@@ -13,7 +13,7 @@ conexao = mysql.connector.connect(
 
 cursor = conexao.cursor()
 
-#### CREATE
+##CREATE
 
 nome_produto = '' #Nome do produto 
 valor = ... #Valor inteiro/Float
@@ -23,14 +23,14 @@ conexao.commit()
 resultado = cursor.fetchall() 
 
 
-###READ
+##READ
 
 comando = f'SELECT * FROM vendas;'
 cursor.execute(comando) 
 resultado = cursor.fetchall() #ler o banco de dados
 print(resultado )
 
-# ###UPDATE
+##UPDATE
 
 nome_produto = "toddynho"
 valor = 6
@@ -38,7 +38,7 @@ comando = f'UPDATE vendas SET valor = {valor} WHERE nome_produto = "{nome_produt
 cursor.execute(comando) 
 conexao.commit() #edita o banco de dados
 
-# ###DELETE
+##DELETE
 
 nome_produto = "toddynho"
 comando = f'DELETE FROM vendas WHERE nome_produto = "{nome_produto}"'
